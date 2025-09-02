@@ -79,37 +79,37 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center">
                 <div class="flex space-x-1">
-                    <a href="{{ route('home') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('home') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('home') ? 'text-blue-600' : '' }}">
                         Главная
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('home') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('about') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('about*') ? 'text-blue-600' : '' }}">
                         О нас
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('about*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('departments') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('departments*') ? 'text-blue-600' : '' }}">
                         Отделения РАЧ
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('departments*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('news') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('news*') ? 'text-blue-600' : '' }}">
                         Новости
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('news*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('events') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('events*') ? 'text-blue-600' : '' }}">
                         Мероприятия
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('events*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('conferences') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('conferences*') ? 'text-blue-600' : '' }}">
                         Конференции
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('conferences*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('publications') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('publications*') ? 'text-blue-600' : '' }}">
                         Издания
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('publications*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group">
+                    <a href="{{ route('membership') }}" class="relative px-4 py-4 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-all duration-300 group {{ request()->routeIs('membership*') ? 'text-blue-600' : '' }}">
                         Членство
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform {{ request()->routeIs('membership*') ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                 </div>
             </div>
