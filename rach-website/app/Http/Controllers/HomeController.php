@@ -23,6 +23,6 @@ class HomeController extends Controller
             ->take(2)
             ->get();
 
-        return view('home', compact('latestNews', 'upcomingConferences'));
+        return view('home-modern', compact('latestNews', 'upcomingConferences'));
     }
 }
